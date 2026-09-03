@@ -18,14 +18,14 @@ public:
 		this->valorMercado = valorMercado;
 		this->clubActual = clubActual;
 	}
-	virtual void mostrarDescripcion();
+	virtual string mostrarDescripcion() = 0;
 	virtual string getTipo() = 0;
-	virtual int getId() = 0;
-	virtual string getNombre() = 0;
-	virtual int getValorMercado() = 0;
-	virtual void setValorMercado(int valor) = 0;
-	virtual string getClubActual() = 0;
-	virtual void setClubActual(string club) = 0;
+	virtual int getId();
+	virtual string getNombre();
+	virtual int getValorMercado();
+	virtual void setValorMercado(int valor);
+	virtual string getClubActual();
+	virtual void setClubActual(string club);
 	virtual ~Jugador() {
 	}
 };
