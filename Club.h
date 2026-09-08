@@ -24,7 +24,7 @@ struct Oferta {
 struct Transferencia {
     int dia;
     Jugador* jugador;
-    int origen;
-    int destino;
+    int clubOrigen;
+    int clubDestino;
     int montoPagado;
-}; 
+};
