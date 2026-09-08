@@ -70,8 +70,14 @@ void SimuladorMercado::iniciarPartida() {
     for (int c = 0; c < (int)clubes.size(); c++) {
         cout << clubes[c].id << ". " << clubes[c].nombre << endl;
     }
-    cout << "Seleccione el numero del club que desea administrar: ";
-    cin >> clubUsuario;
+
+    do {
+        cout << "Seleccione el numero del club que desea administrar: ";
+        cin >> clubUsuario;
+        if (clubUsuario < 1 || clubUsuario > (int)clubes.size()) {
+            cout << "Club invalido. Por favor seleccione un numero entre 1 y " << clubes.size() << "." << endl;
+        }
+	} while (clubUsuario < 1 || clubUsuario >(int)clubes.size());
 
     // 4. Solicitar cantidad de dias de simulacion (validado entre 5 y 15)
     do {
