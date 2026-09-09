@@ -20,7 +20,7 @@ private:
 public:
     void iniciarPartida();
     void verMiClub();
-    void explorarJugadores(string filtro);
+    void explorarJugadores(string filtro, int idBuscado);
     void realizarOferta(int idJugador, int monto);
     void revisarOfertasRecibidas();
     void verHistorial();
